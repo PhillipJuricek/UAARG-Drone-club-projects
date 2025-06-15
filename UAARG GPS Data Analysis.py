@@ -1,8 +1,8 @@
 from pyproj import Transformer, CRS
 
 import matplotlib.pyplot as plt
+#install neccessary libraries
 
-# Example: Replace with your actual data
 data = [
 (53.4954765, -113.5472986),
 (53.4954764, -113.5472987),
@@ -572,6 +572,7 @@ data = [
 ]
 first = data[0]
 
+# define area codes for library
 wgs84 = CRS.from_epsg(4326)
 utm_zone12n = CRS.from_proj4("+proj=utm +zone=12 +datum=WGS84 +units=m +no_defs")
 transformer = Transformer.from_crs(wgs84, utm_zone12n, always_xy=True)
